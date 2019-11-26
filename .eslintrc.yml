@@ -1,0 +1,16 @@
+extends:
+  - airbnb-base
+  - prettier
+  - plugin:prettier/recommended
+plugins:
+  - prettier
+  - import
+rules:
+  prettier/prettier:
+    - error
+    - trailingComma: all
+      singleQuote: true
+      arrow-body-style: 0
+
+globals:
+  __: true

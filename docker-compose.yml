@@ -1,0 +1,18 @@
+# Use postgres/example user/password credentials
+version: "3.1"
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+    networks:
+      default:
+        ipv4_address: 172.18.0.110
+
+networks:
+  default:
+    external:
+      # docker network create --gateway 172.18.0.1 --subnet 172.18.0.0/24 webproxy
+      name: ${NETWORK:-webproxy}
