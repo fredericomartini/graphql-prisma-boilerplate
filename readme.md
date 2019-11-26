@@ -2,4 +2,4 @@
 
 ### Todo
 
-- [] Update readme
+- [ ] Update readme
